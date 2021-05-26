@@ -21,7 +21,6 @@ function onInput(){
     
     resultsContainer.innerHTML = '';
     if (inputEl.value !== '' && inputEl.value !== ' ' && inputEl.value !== '.'){
-        console.log(searchQuery);
         fetchCountries(searchQuery).then(data => {
             if (data.status === 404) {
                 pontyfyMassage('Nothing was found for your query!')
